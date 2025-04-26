@@ -10,8 +10,13 @@ public class Spawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine(SpawnZombie());
+    }
+    private IEnumerator SpawnZombie()
+    {
+        GameObject zombieCopy = Instantiate(zombie);
+        yield return null;
     }
 
-    
+
 }
